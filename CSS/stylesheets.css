@@ -1,0 +1,141 @@
+body{
+    margin-top: 50px;
+}
+.navbar-dark{
+    background-color: #512dab
+}
+.jumbotron{
+    background-color: rgb(140, 120, 231);
+}
+.row-header{
+    color: azure;
+}
+.row-content{
+   margin-bottom: 20px;
+}
+.title{
+    font-weight: 500;
+    font-family: fantasy;
+    color: cyan;
+    text-shadow: 10px 10px 10px #150485;
+}
+.carousel {
+    background: #eddffa; }
+.carousel .carousel-item {
+    height: 600px; }
+
+.carousel .carousel-item img {
+    position: absolute;
+    top: 5%;
+    left: 10%;
+    height:400px;
+    width: 80%;
+    border-radius: 50%;
+    border-width: 10px;
+    border-style: double;
+    
+    
+}
+
+.carousel-caption h2{
+    font-family: cursive;
+    font-size: 50px;
+    font-weight: bolder;
+    color: #2a3d66;
+    text-shadow: 5px 5px 5px magenta;
+    
+}
+.carousel-caption p{
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    font-size: larger;
+    font-weight: lighter;
+    color: #590995;
+    
+}
+.carousel-indicators li{
+    background-color:darkviolet;
+}
+.carousel-control-prev-icon {
+    background-color: darkblue;
+}
+.carousel-control-next-icon{
+    background-color: darkblue;
+}
+#carouselButton {
+    right: 0px;
+    position: absolute;
+    bottom: 0px;
+    z-index: 1; 
+}
+.footer {
+    background-color: #D1C4E9;
+    margin: 0px auto;
+    padding: 20px 0px; 
+    margin-top: 40px;
+}
+#welcomeimg{
+    margin-left: 60px;
+    padding: 5px;
+    width: 80%;
+    border-radius: 50%;  
+    box-shadow: 10px 10px 10px #a3d8f4; 
+}
+#userdis{
+    text-align: center;
+    font-family: cursive;
+    color: cyan;
+}
+#fspotimg{
+    height: 300px;
+    width: 50%;
+    border-radius: 20%;
+    margin-left: 25%;
+    border-style: groove;
+    box-shadow:10px 10px 5px lightslategray;
+    
+}
+#addspotimg{
+    height: 300px;
+    width: auto;
+    border-radius: 20%;
+    margin-left: 25%;
+    border-style: groove;
+    box-shadow:10px 10px 5px lightslategray;
+}
+.card{
+    box-shadow: 20px 20px 20px #a3d8f4;
+    padding: 10px;
+    margin: 10px;
+}
+.card-header{
+    background-color: #0278ae;
+    color: #f1f3f8;
+    font-family: fantasy;
+    font-size: 50px;
+    text-shadow: 10px 10px 5px darkblue;
+}
+.card-body{
+    background-color:#a5ecd7;
+
+}
+.fscard{
+    text-align: center;
+    color: lavender;
+    text-shadow: 5px 5px 5px darkblue;
+    padding: 5%;
+    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+    font-size: 40px;
+    
+}
+.fscard button{
+    font-size: 30px;
+}
+.tab-content{
+    
+}
+.tab-content h1{
+    font-family: fantasy;
+    
+    color: darkgrey;
+    text-shadow: 5px 5px 5px darkblue;
+}
