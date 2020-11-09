@@ -80,11 +80,7 @@ body{
     border-radius: 50%;  
     box-shadow: 10px 10px 10px #a3d8f4; 
 }
-#userdis{
-    text-align: center;
-    font-family: cursive;
-    color: cyan;
-}
+
 #fspotimg{
     height: 300px;
     width: 50%;
@@ -130,12 +126,10 @@ body{
 .fscard button{
     font-size: 30px;
 }
-.tab-content{
-    
-}
 .tab-content h1{
     font-family: fantasy;
     
     color: darkgrey;
     text-shadow: 5px 5px 5px darkblue;
 }
+
