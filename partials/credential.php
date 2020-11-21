@@ -57,7 +57,7 @@
 
       while($result = mysqli_fetch_array($query)) {
         $_SESSION["username"] = $result["username"];
-        if ($result["admin"] == "true") {
+        if ($result["username"] == "admin123") {
           header("location: admin.php");
         }
         else{

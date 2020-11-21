@@ -1,6 +1,7 @@
 <?php
   $page = "addplace";
   session_start();
+  include("partials/spotEntryDB.php");
 ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -29,98 +30,113 @@
               <div role="tabpanel" class="tab-pane fade show active" id="addplacetap" aria-labelledby="add-tab">
                 <div class="card col-10">
                   <div class="col-12 mb-4 mt-4 card-header">
-                    <h1>Add Parking Place.......</h1>
+                      <h1>Add Parking Place.......</h1>
                   </div>
                   <div class="card-body">
                     <div class="col-12 col-md-10">
-                      <form>
+                      <form method=POST name="addplaceform" id="addplaceform" enctype=”multipart/form-data” >
                         <div class="form-group row">
                           <label for="cname" class="col-md-4 col-form-label"> Company/Owner Name :</label>
                           <div class="col-md-7">
-                            <input type="text" class="form-control" id="cname" name="cname" placeholder="Enter Name">
+                              <input type="text" class="form-control" id="cname" name="cname" placeholder="Enter Name" required>
                           </div>
                         </div>
                         <div class="form-group row">
                           <label for="cphone" class="col-md-4 col-form-label"> Phone Number :</label>
                           <div class="col-md-7">
-                            <input type="tel" class="form-control" id="cphone" name="cphone" placeholder="Enter Phone Number">
-                          </div>
-                        </div>
-                        <div class="form-group row">
-                          <label for="clandline" class="col-md-4 col-form-label"> Land-Line Number :</label>
-                          <div class="col-md-7">
-                            <input type="tel" class="form-control" id="clandline" name="clandline" placeholder="Enter Land-Line Number">
+                              <input type="tel" class="form-control" id="cphone" name="cphone" placeholder="Enter Phone Number" required>
                           </div>
                         </div>
                         <div class="form-group row">
                           <label for="cemail" class="col-md-4 col-form-label"> Email Id :</label>
                           <div class="col-md-7">
-                            <input type="email" class="form-control" id="cemail" name="cemail" placeholder="Enter Email Id">
+                              <input type="email" class="form-control" id="cemail" name="cemail" placeholder="Enter Email Id" required>
                           </div>
                         </div>
                         <div class="form-group row">
-                          <label for="cplacetype" class="col-md-4 col-form-label"> select type : </label>
+                          <label for="caddress" class="col-md-4 col-form-label"> Address :</label>
+                          <div class="col-md-7">
+                              <textarea class="form-control" id="caddress" name="caddress" placeholder="Enter Parking place Address" required></textarea>
+                          </div>
+                        </div>
+                        <div class="form-group row">
+                          <label class="col-md-4 col-form-label"> select type : </label>
                           <div class="col-md-7">
                             <div class="form-check form-check-inline">
-                              <input class="form-check-input" type="checkbox" id="twowheel" name="twowheel" value="twowheel">
+                              <input class="form-check-input" type="checkbox" id="twowheel" name="twowheel" value="1">
                               <label class="form-check-label" for="twowheel">Two Wheelers</label>
                             </div>
                             <div class="form-check form-check-inline">
-                              <input class="form-check-input" type="checkbox" id="threewheel" name="threewheel" value="threewheel">
+                              <input class="form-check-input" type="checkbox" id="threewheel" name="threewheel" value="1">
                               <label class="form-check-label" for="threewheel">Three wheelers</label>
                             </div>
                             <div class="form-check form-check-inline">
-                              <input class="form-check-input" type="checkbox" id="fourwheel" name="fourwheel" value="fourwheel">
+                              <input class="form-check-input" type="checkbox" id="fourwheel" name="fourwheel" value="1">
                               <label class="form-check-label" for="fourwheel">Four Wheelers (Cars)</label>
                             </div> 
                             <div class="form-check form-check-inline">
-                              <input class="form-check-input" type="checkbox" id="heavyveh" name="heavyveh" value="heavyveh">
+                              <input class="form-check-input" type="checkbox" id="heavyveh" name="heavyveh" value="1">
                               <label class="form-check-label" for="heavyveh">Heavy Vehicles (Bus, Truck, etc.)</label>
                             </div>
                           </div>
                           <i class="col-md-7 offset-4 mb-2 mt-2">please check the box of Parking place type....</i>
                         </div>
                         <div class="form-group row">
-                          <label for="caddress" class="col-md-4 col-form-label"> Address :</label>
+                          <label class="col-md-4 col-form-label">Charge Per hour</label>
                           <div class="col-md-7">
-                            <textarea class="form-control" id="caddress" name="caddress" placeholder="Enter Parking place Address"></textarea>
+                            <div class="row">
+                              <label class="col-md-7 col-form-label">Two Wheeler (In Rupees) : </label>
+                              <div class="col-md-4">
+                                <input type="text" id="charge2wheel" name="charge2wheel" class="form-control" value="0">
+                              </div>
+                            </div>
+                            <div class="row">
+                              <label class="col-md-7 col-form-label">Three Wheeler (In Rupees) : </label>
+                              <div class="col-md-4">
+                                <input type="text" id="charge3wheel" name="charge3wheel" class="form-control" value="0">
+                              </div>
+                            </div>
+                            <div class="row">
+                              <label class="col-md-7 col-form-label">Four Wheeler (In Rupees) : </label>
+                              <div class="col-md-4">
+                                <input type="text" id="charge4wheel" name="charge4wheel" class="form-control" value="0">
+                              </div>
+                            </div>
+                            <div class="row">
+                              <label class="col-md-7 col-form-label">Heavy Vehicles (In Rupees) : </label>
+                              <div class="col-md-4">
+                                <input type="text" id="chargeHeavywheel" name="chargeHeavywheel" class="form-control" value="0">
+                              </div>
+                            </div>
+                            <i>Please Enter the Price of Place that you have.....</i>
                           </div>
-                        </div>
+                        </div>  
                         <div class="form-group row">
-                          <label for="ownerauth" class="col-md-4 col-form-label">Owner authetication :</label>
-                          <div class="col-md-3">
-                          <select name="ownerauth" id="ownerauth">
-                            <option value="select">Select</option>
-                            <option value="adhaar">Adhaar Card</option>
-                            <option value="pan">Pan Card</option>
-                            <option value="other">others</option>
-                          </select>
-                          </div>
-                          <div class="col-md-4">
-                            <input type="file" class="form-control-file" id="pspotimg" name="pspotimg" accept="image/*" multiple>
-                          </div>
-                        </div>
-                        <div class="form-group row">
-                          <label for="caddress" class="col-md-4 col-form-label"> Address :</label>
+                          <label for="file1" class="col-md-4 col-form-label">Owner authetication :</label>
                           <div class="col-md-7">
-                            <textarea class="form-control" id="caddress" name="caddress" placeholder="Enter Parking place Address"></textarea>
+                            <input type="file" class="form-control-file" id="file1" name="file1" >
+                            <i>please upload Image of Adhaar card, Pan Card or other Identity card for Owner Authentication....</i>
                           </div>
                         </div>
                         <div class="form-group row">
-                          <label for="pspotimg" class="col-md-4 col-form-label"> Upload Images :</label>
-                          <div class="col-md-3">
-                            <input type="number" class="form-control" id="numofimg" name="numofimg" placeholder="No. of Images">
+                          <label for="file2" class="col-md-4 col-form-label"> Property Paper :</label>
+                          <div class="col-md-7">
+                            <input type="file" class="form-control-file" id="file2"  name="file2">
+                            <i>please upload Image having Owner Name and property address for verification....</i>
                           </div>
-                          <div class="col-md-4">
-                            <input type="file" class="form-control-file" id="pspotimg" name="pspotimg" accept="image/*" multiple>
+                        </div>
+                        <div class="form-group row">
+                          <label for="spotImg[]" class="col-md-4 col-form-label"> Upload Images :</label>
+                          <div class="col-md-7">
+                            <input type="file" class="form-control-file" id="spotImg[]" name="spotImg[]" accept="image/*" multiple>
                           </div>
                           <i class="col-md-7 offset-4 ">please upload minimum Two images of your Parking Place.....</i>
                         </div>
                         <div class="form-group row">
                           <div class="offset-md-4 col-md-10 mt-4">
-                              <button type="submit" class="btn-lg btn-primary">Add Place</button>
+                            <button type="submit" class="btn-lg btn-primary" name="addplaceform">Add Place</button>
                           </div>
-                      </div>
+                        </div>
                       </form>
                     </div>
                   </div>
@@ -138,10 +154,7 @@
   
         
   
-      <?php include("partials/footer.php") ?>
-
-    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" ></script>
-    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js">   </script>
-    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"> </script>
+    <?php include("partials/footer.php") ?>
+    <?php include("partials/script.php") ?>
 </body>
 </html>

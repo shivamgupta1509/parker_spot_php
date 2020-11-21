@@ -4,6 +4,16 @@
     include("partials/credential.php");
   }
   $page = "contact";
+  if(isset($_POST["sendmsg"])){
+    include("db_conn.php");
+    $name = $_POST["name"];
+    $contact = $_POST["contact"];
+    $email = $_POST["email"];
+    $msg = $_POST["msg"];
+    $q = "INSERT INTO `feedback`(`Name`, `contact`, `email`, `message`) VALUES ('$name','$contact','$email','$msg')";
+    $query = mysqli_query($con, $q);
+    $_SESSION["feedback"] = 1;
+  }
 ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -59,29 +69,36 @@
     <?php include("partials/navbaar.php") ?>
     <?php include("partials/modals.php") ?>
     <?php include("partials/header.php") ?>
-
+    <?php 
+      if($_SESSION["feedback"] == 1){
+        echo "<script>swal('Feedback Send!', 'Clicked the Ok button!', 'success')</script>";
+        $_SESSION["feedback"] = 0;
+      }
+    ?>
     <div class="container">
       <div class="row row-content">
         <div class="col-sm-6 offset-3 contact">
-          <h1>Contact Us</h1>
-          <div class="txtb">
-            <label>Full Name :</label>
-            <input type="text" name="" value="" placeholder="Enter Your Name">
-          </div>
-          <div class="txtb">
-            <label>Email :</label>
-            <input type="email" name="" value="" placeholder="Enter Your Email">
-          </div>
-          <div class="txtb">
-            <label>Contact no :</label>
-            <input type="text" name="" value="" placeholder="Enter Your Contact no">
-          </div>
-          <div class="txtb">
-            <label>Message :</label>
-            <textarea name="" id="" cols="30" rows="5" placeholder="Your Message"></textarea>
-          </div>
-          <br>
-          <button type="button" class="btn btn-outline-success">Send</button>
+          <form method="post" >
+            <h1>Contact Us</h1>
+            <div class="txtb">
+              <label>Full Name :</label>
+              <input type="text" name="name" id="name" placeholder="Enter Your Name" required>
+            </div>
+            <div class="txtb">
+              <label>Email :</label>
+              <input type="email" name="email" id="email"  placeholder="Enter Your Email" required>
+            </div>
+            <div class="txtb">
+              <label>Contact no :</label>
+              <input type="text" name="contact" id="contact" placeholder="Enter Your Contact no" required>
+            </div>
+            <div class="txtb">
+              <label>Message :</label>
+              <textarea name="msg" id="msg" cols="30" rows="5" placeholder="Your Message" required></textarea>
+            </div>
+            <br>
+            <button type="submit" class="btn btn-outline-success" id="sendmsg" name="sendmsg">Send</button>
+          </form>
         </div>
       </div>
     </div>

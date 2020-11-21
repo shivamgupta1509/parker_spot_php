@@ -1,7 +1,64 @@
-.header{
-    color: darkslateblue;
-    font-family: cursive;
-    text-shadow: 5px 5px 5px lightskyblue;
+  #dashboard{
+    /* height: 100%;
+    width: 100%; */
+    position: relative;
+  }
+  #sidebar {
+    height: 100%;
+    width: 18%;
+    position: fixed;
+    z-index: 1;
+    top: 0;
+    left: 0;
+    background-color: #512DA8;
+    overflow-x: hidden;
+    padding-top: 20px;
+  }
+  
+  #sidebar h4 {
+    color: white;
+    margin-bottom: 20px;
+    padding: 6px 8px 6px 16px;
+    font-family: 'Big Shoulders Inline Text', cursive;
+    font-size: 40px;
+  }
+  
+  #sidebar a {
+    margin-top: 10px;
+    padding: 6px 8px 6px 16px;
+    /* text-decoration: none; */
+    font-size: 20px;
+    color: #fff;
+    display: block;
+  }
+  
+  #sidebar a:hover {
+    text-decoration: underline;
+    color: #f1f1f1;
+    background-color: black;
+  }
+  #main-content{
+    height: 100%;
+    margin-top: auto ;
+    margin-bottom: auto;
+    margin-left: 18%;
+    margin-right: none;
+    width: 80%;
+    position: fixed;
+    background-color: azure;
     text-align: center;
-    background-color: floralwhite;
-}
+  }
+  .active{
+    font-style: italic;
+    font-weight: 700;
+  }
+  #header{
+    font-family: 'Big Shoulders Inline Text', cursive;
+    font-size: 50px;
+    color: lightcyan;
+    background-color: rgb(172, 162, 224);
+    text-align: center;
+    padding: 10px;
+    margin: 10px;
+    
+  }

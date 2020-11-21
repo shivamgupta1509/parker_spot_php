@@ -1,27 +1,41 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>admin panel</title>
-    <link rel="stylesheet" href="CSS/admin.css">
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/css/bootstrap.min.css">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Admin_Panel</title>
+  <?php include("partials/link.php"); ?>
+  <link rel="stylesheet" href="CSS/admin.css">
+  <link rel="preconnect" href="https://fonts.gstatic.com">
+  <link href="https://fonts.googleapis.com/css2?family=Big+Shoulders+Inline+Text:wght@800&display=swap" rel="stylesheet">
+  
+
+  
 </head>
 <body>
-    <h1 class="header">Admin Panel</h1>
-    <div class="container-fluid">
-        <div class="row">
-            <div class="col-sm-3">
-                <div class="d-flex flex-column bd-highlight mb-3">
-                    <div class="p-2 bd-highlight">Flex item 1</div>
-                    <div class="p-2 bd-highlight">Flex item 2</div>
-                    <div class="p-2 bd-highlight">Flex item 3</div>
-                </div>
-            </div>
-        </div>
+  <div id="dashboard">
+    <div id="sidebar">
+      <div class="sidebar-header">
+        <h4>Parkers_Spot</h4>
+        <hr>
+      </div>
+      <div class="sidebar-content">
+        <a href="#" class="active"><i class="fa fa-home"></i> Home</a>
+        <a href="#"><i class="fas fa-list-alt"></i> Spot_Management</a>
+        <a href="userquery.php"><i class="fas fa-comment-dots"></i> User Query</a>
+      </div>
     </div>
+    <div id="main-content">
+      <div class="container-fluid">
+        <div class="row">
 
-    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/js/bootstrap.bundle.min.js"></script>
+        </div>
+      </div>
+    </div>
+  </div>
+
+
+
+  <?php include("partials/script.php") ?>
 </body>
 </html>

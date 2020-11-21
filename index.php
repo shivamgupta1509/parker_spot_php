@@ -1,5 +1,6 @@
 <?php 
   session_start();
+  $_SESSION["feedback"] = 0;
   include("partials/credential.php");
   $page = "home";
 ?>
