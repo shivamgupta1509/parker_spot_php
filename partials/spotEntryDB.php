@@ -20,23 +20,31 @@
         $charge4wheel = $_POST["charge4wheel"];
         $chargeHeavywheel = $_POST["chargeHeavywheel"];
 
-        $ownerAuth_dir = "/images/ownerIdProof/";
-        $propertyPaper_dir = "/images/propertyPaper/";
-        // $parkingSpotImg = "/images/parkingSpotImg/";
+        $ownerAuth_dir = "images/ownerIdProof/";
+        $propertyPaper_dir = "images/propertyPaper/";
+        $parkingSpotImg_dir = "images/parkingSpotImg/";
 
         $ownerAuth_path = $ownerAuth_dir.basename($_FILES['file1']['name']);
         $propertyPaper_path = $propertyPaper_dir.basename($_FILES['file2']['name']);
-
-        $q = "INSERT INTO `placedetail`(`username`, `cname`, `cphone`, `cemail`, `caddress`, `wheel2`, `wheel3`, `wheel4`, `heavywheel`, `wheel2price`, `wheel3price`, `wheel4price`, `heavywheelprice`, `ownerproof`, `propertyproof`) VALUES ('$username', '$cname', '$cphone', '$cemail', '$caddress', '$twowheel', '$threewheel', '$fourwheel', '$heavyveh', '$charge2wheel', '$charge3wheel', '$charge4wheel', '$chargeHeavywheel', '$ownerAuth_path', '$propertyPaper_path')";
-        mysqli_query($con, $q);
-
+        $spotImgNames = "";
+        if(!empty(array_filter($_FILES['file3']['name']))){
+            foreach($_FILES['file3']['name'] as $key=>$val){
+                $spotImgName = basename($_FILES['file3']['name'][$key]);
+                $spotImgPath = $parkingSpotImg_dir . $spotImgName;
+                $spotImgNames = $spotImgName .','. $spotImgNames;
+                move_uploaded_file($_FILES["file3"]["tmp_name"][$key],$spotImgPath);
+            }
+        }
         move_uploaded_file($_FILES["file1"]["tmp_name"],$ownerAuth_path);
         move_uploaded_file($_FILES["file2"]["tmp_name"],$propertyPaper_path);
-        // if(!empty(array_filter($_FILES["spotImg"]["name"]))){
-        //     foreach($_FILES["spotImg"]["name"] as $key => $val){
-                
-        //     }
-        // }
+
+
+
+
+        $q = "INSERT INTO `placedetail`(`username`, `cname`, `cphone`, `cemail`, `caddress`, `wheel2`, `wheel3`, `wheel4`, `heavywheel`, `wheel2price`, `wheel3price`, `wheel4price`, `heavywheelprice`, `ownerproof`, `propertyproof`, `spotimg`) VALUES('$username', '$cname', '$cphone', '$cemail', '$caddress', '$twowheel', '$threewheel', '$fourwheel', '$heavyveh', '$charge2wheel', '$charge3wheel', '$charge4wheel', '$chargeHeavywheel', '$ownerAuth_path', '$propertyPaper_path', '$spotImgNames')";
+
+        mysqli_query($con, $q);
+        echo"<script>alert('Form Submitted Successfully!')</script>";
 
     }
 ?>

@@ -24,7 +24,7 @@
             </div>
             <div class="sidebar-content">
                 <a href="admin.php"><i class="fa fa-home"></i> Home</a>
-                <a href="#"><i class="fas fa-list-alt"></i> Spot_Management</a>
+                <a href="spotManagement.php"><i class="fas fa-list-alt"></i> Spot_Management</a>
                 <a href="#" class="active"><i class="fas fa-comment-dots"></i> User Query</a>
             </div>
         </div>

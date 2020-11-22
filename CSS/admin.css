@@ -43,8 +43,8 @@
     margin-bottom: auto;
     margin-left: 18%;
     margin-right: none;
-    width: 80%;
-    position: fixed;
+    width: 75%;
+    position: absolute;
     background-color: azure;
     text-align: center;
   }
@@ -60,5 +60,5 @@
     text-align: center;
     padding: 10px;
     margin: 10px;
-    
   }
+  

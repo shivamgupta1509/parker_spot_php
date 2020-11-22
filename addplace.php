@@ -34,7 +34,7 @@
                   </div>
                   <div class="card-body">
                     <div class="col-12 col-md-10">
-                      <form method=POST name="addplaceform" id="addplaceform" enctype=”multipart/form-data” >
+                      <form method=POST name="addplaceform" id="addplaceform" enctype="multipart/form-data" >
                         <div class="form-group row">
                           <label for="cname" class="col-md-4 col-form-label"> Company/Owner Name :</label>
                           <div class="col-md-7">
@@ -114,21 +114,21 @@
                         <div class="form-group row">
                           <label for="file1" class="col-md-4 col-form-label">Owner authetication :</label>
                           <div class="col-md-7">
-                            <input type="file" class="form-control-file" id="file1" name="file1" >
+                            <input type="file" class="form-control-file" id="file1" name="file1" accept="image/*" required>
                             <i>please upload Image of Adhaar card, Pan Card or other Identity card for Owner Authentication....</i>
                           </div>
                         </div>
                         <div class="form-group row">
                           <label for="file2" class="col-md-4 col-form-label"> Property Paper :</label>
                           <div class="col-md-7">
-                            <input type="file" class="form-control-file" id="file2"  name="file2">
+                            <input type="file" class="form-control-file" id="file2"  name="file2" accept="image/*" required>
                             <i>please upload Image having Owner Name and property address for verification....</i>
                           </div>
                         </div>
                         <div class="form-group row">
-                          <label for="spotImg[]" class="col-md-4 col-form-label"> Upload Images :</label>
+                          <label for="file3[]" class="col-md-4 col-form-label"> Upload Images :</label>
                           <div class="col-md-7">
-                            <input type="file" class="form-control-file" id="spotImg[]" name="spotImg[]" accept="image/*" multiple>
+                            <input type="file" class="form-control-file" id="file3[]" name="file3[]" accept="image/*" multiple required>
                           </div>
                           <i class="col-md-7 offset-4 ">please upload minimum Two images of your Parking Place.....</i>
                         </div>
@@ -144,7 +144,10 @@
               </div>
               <div role="tabpanel" class="tab-pane fade" id="veiwprespot" aria-labelledby="view-tab">
                 <div class="col-12">
-                  <p>No previous Data is Available.....</p>
+                  <div class="card">
+                    <div class="card-body">
+                    <div>
+                  </div>
                 </div> 
               </div>
             </div>
