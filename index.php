@@ -15,9 +15,9 @@
   </head>
   <body>
 
-  <!-- <?php if ($issignedup) { ?>
+  <?php if ($_SESSION["issignedup"]) { ?>
   <?php echo "<script>swal('Successfully Signed Up!', 'Clicked the Ok button!', 'success')</script>"; ?>
-  <?php } ?> -->
+  <?php } ?>
 
     <?php include("partials/navbaar.php"); ?>
     <?php include("partials/modals.php"); ?>

@@ -1,5 +1,6 @@
 body{
     margin-top: 50px;
+    background-color: #e8ffff;
 }
 .navbar-dark{
     background-color: #512dab
@@ -78,7 +79,7 @@ body{
     padding: 5px;
     width: 80%;
     border-radius: 50%;  
-    box-shadow: 10px 10px 10px #a3d8f4; 
+    box-shadow: 3px 5px 8px rgba(0, 0, 0, 0.4);
 }
 
 #fspotimg{
@@ -87,7 +88,7 @@ body{
     border-radius: 20%;
     margin-left: 25%;
     border-style: groove;
-    box-shadow:10px 10px 5px lightslategray;
+    box-shadow: 3px 5px 8px rgba(0, 0, 0, 0.4);
     
 }
 #addspotimg{
@@ -96,10 +97,11 @@ body{
     border-radius: 20%;
     margin-left: 25%;
     border-style: groove;
-    box-shadow:10px 10px 5px lightslategray;
+    box-shadow: 3px 5px 8px rgba(0, 0, 0, 0.4);
 }
 .card{
-    box-shadow: 20px 20px 20px #a3d8f4;
+    border-radius: 15px;
+    box-shadow: 3px 5px 8px rgba(0, 0, 0, 0.4);
     padding: 10px;
     margin: 10px;
 }
@@ -111,13 +113,14 @@ body{
     text-shadow: 10px 10px 5px darkblue;
 }
 .card-body{
-    background-color:#a5ecd7;
-
+    background-color:#b9fffc;
+    font-family: 'Times New Roman', Times, serif;
+    font-size: 20px;
 }
 .fscard{
     text-align: center;
     color: lavender;
-    text-shadow: 5px 5px 5px darkblue;
+    text-shadow: 3px 3px 3px darkblue;
     padding: 5%;
     font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
     font-size: 40px;
@@ -128,8 +131,7 @@ body{
 }
 .tab-content h1{
     font-family: fantasy;
-    
     color: darkgrey;
-    text-shadow: 5px 5px 5px darkblue;
+    text-shadow: 2px 2px 2px darkblue;
 }
 

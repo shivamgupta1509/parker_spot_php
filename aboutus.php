@@ -33,8 +33,8 @@
             <div class="card-body">
               <h5 class="card-title">Details :</h5><br>
               <p class="card-text">Name : Shivam Gupta</p><br>
-              <p class="card-text">Contact no : </p><br>
-              <p class="card-text">Gmail Id : </p>
+              <p class="card-text">Contact no : 98199930</p><br>
+              <p class="card-text">Gmail Id : shivamgupta000915@gmail.com</p>
             </div>
           </div>
           <div class="card contact" style="margin: 0 40px 0 40px;">
@@ -42,7 +42,7 @@
             <div class="card-body">
               <h5 class="card-title">Details :</h5><br>
               <p class="card-text">Name : Rinkesh Kumavat</p><br>
-              <p class="card-text">Contact no : 9967762318</p><br>
+              <p class="card-text">Contact no : 9967702318</p><br>
               <p class="card-text">Gmail Id : rinkesh2001kumawat@gmail.com</p>
             </div>
           </div>
@@ -51,8 +51,8 @@
             <div class="card-body">
               <h5 class="card-title">Details :</h5><br>
               <p class="card-text">Name : Mohommad Ali</p><br>
-              <p class="card-text">Contact no : </p><br>
-              <p class="card-text">Gmail Id : </p>
+              <p class="card-text">Contact no : 8867895867</p><br>
+              <p class="card-text">Gmail Id : khanali0000@gmail.com</p>
             </div>
           </div>
         </div>

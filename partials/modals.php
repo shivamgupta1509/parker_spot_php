@@ -93,3 +93,33 @@
         </div>
       </div>
     </div>
+
+    
+        <!-- Modal of Owner Identity Img -->
+        <div id="ownerAuth" class="modal fade" role="dialog">
+            <div class="modal-dialog modal-lg" role="content">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h4 class="modal-title">Owner Identity Verification: </h4>
+                        <button type="button" class="close" data-dismiss="modal">&times;</button>
+                    </div>
+                    <div class="modal-body">
+                        <img id="ownerProofImg" src='' width=100% height=auto alt="checking"/>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- Modal of Property paper Img -->
+        <div id="propertyPaper" class="modal fade" role="dialog">
+            <div class="modal-dialog modal-lg" role="content">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h4 class="modal-title">Property Verification: </h4>
+                        <button type="button" class="close" data-dismiss="modal">&times;</button>
+                    </div>
+                    <div class="modal-body">
+                        <img id="propertyProofImg" src='' width=100% height=auto alt="checking"/>
+                    </div>
+                </div>
+            </div>
+        </div>

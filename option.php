@@ -39,7 +39,7 @@
                 </div>
                 <div class="col-12 col-sm-6 fscard">
                   <p>Get Your Favourite Spot easily.....</p>
-                  <a href="#"><button class="btn btn-info"><span class="fa fa-search"></span> Search Place</button></a>
+                  <a href="searchPlace.php"><button class="btn btn-info"><span class="fa fa-search"></span> Search Place</button></a>
                 </div>
               </div>
             </div>

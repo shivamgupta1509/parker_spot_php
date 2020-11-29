@@ -26,6 +26,7 @@
                 <a href="admin.php"><i class="fa fa-home"></i> Home</a>
                 <a href="spotManagement.php"><i class="fas fa-list-alt"></i> Spot_Management</a>
                 <a href="#" class="active"><i class="fas fa-comment-dots"></i> User Query</a>
+                <a href="logout.php"><i class="fas fa-sign-out-alt"></i> Logout</a>
             </div>
         </div>
         <div id="main-content">

@@ -4,6 +4,11 @@
   $_SESSION["issignedup"] = false;
   $_SESSION["issignedin"] = false;
   $_SESSION["flag"] = 0;
+  $_SESSION["active"] = 0;
+  $_SESSION["del"] = 0;
+  $_SESSION["edit"] = 0;
+  $_SESSION["page"] = "null";
+  $_SESSION["book"] = 0;
   //Registration process
   if (isset($_POST["register"])) {
     $fullname = $_POST["fullname"];
